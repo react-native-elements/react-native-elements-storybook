@@ -1,0 +1,9 @@
+!node_modules/
+
+node_modules/*
+!node_modules/react-native-elements/
+
+.expo/*
+npm-debug.*
+
+/beta

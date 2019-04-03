@@ -1,0 +1,8 @@
+{
+  "name": "react-native-elements-storybook",
+  "version": "1.0.0",
+  "description": "Storybook for React Native Elements UI Library",
+  "main": "index.js",
+  "author": "Havit Rovik",
+  "license": "MIT"
+}
