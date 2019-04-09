@@ -21,4 +21,15 @@ storiesOf('Button', module)
   ));
 
 storiesOf('RNE Button', module)
-  .add('with title', () => <RNEButton title='Hit me!' />);
+  .add('with title', () => <RNEButton title='Hit me!' />)
+  .add('with icon', () => (
+    <RNEButton
+      icon={{
+        name: "arrow-right",
+        size: 15,
+        color: "white",
+        type: "font-awesome"
+      }}
+      title="Button with icon"
+    />
+  ));
