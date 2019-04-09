@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Button as RNEButton } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
@@ -31,5 +32,16 @@ storiesOf('RNE Button', module)
         type: "font-awesome"
       }}
       title="Button with icon"
+    />
+  ))
+  .add('with Icon component', () => (
+    <RNEButton
+      icon={<Icon
+        name="arrow-right"
+        size={15}
+        color="white"
+        type="font-awesome"
+      />}
+      title="Button with Icon component"
     />
   ));
