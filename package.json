@@ -21,6 +21,7 @@
     "react-art": "^16.6.3",
     "react-dom": "^16.6.x",
     "react-native": "0.55.x",
+    "react-native-elements": "^1.1.0",
     "react-native-web": "^0.9.x"
   },
   "devDependencies": {
