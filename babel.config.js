@@ -9,6 +9,6 @@ module.exports = function(api) {
         }
       }]
     ],
-    presets: [["react-app"], ['babel-preset-expo']],
+    presets: [["react-app"]],
   };
 };
