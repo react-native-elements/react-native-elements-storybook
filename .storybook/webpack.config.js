@@ -18,16 +18,18 @@ module.exports = {
       {
         test: /\.js$/,
         include: [
+          path.resolve(__dirname, '../node_modules/react-native/'),
           path.resolve(__dirname, '../node_modules/react-native-elements/'),
           path.resolve(__dirname, '../node_modules/react-native-ratings/'),
           path.resolve(__dirname, '../node_modules/react-native-vector-icons/'),
-          path.resolve(__dirname, '../'),
         ],
         use: {
           loader: 'babel-loader',
           options: {
             cacheDirectory: false,
-            presets: ['module:metro-react-native-babel-preset'],
+            presets: [
+              ['module:metro-react-native-babel-preset', { 'disableImportExportTransform': true }]
+            ],
             plugins: [
               // needed to support async/await
               '@babel/plugin-transform-runtime',
