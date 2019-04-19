@@ -1,14 +1,29 @@
-module.exports = function(api) {
+module.exports = function (api) {
 
+  // https://babeljs.io/docs/en/config-files#apicache
   api.cache(true);
+
+  if (process.env.REALM === 'WEB') {
+    return {
+      plugins: [
+        ["module-resolver", {
+          alias: {
+            "^react-native$": "react-native-web"
+          }
+        }]
+      ],
+      presets: [["react-app"]],
+    };
+  }
+
   return {
-  "plugins": [
+    plugins: [
       ["module-resolver", {
-        "alias": {
-          "^react-native$": "react-native-web"
+        alias: {
+          "@storybook/react": "@storybook/react-native"
         }
       }]
     ],
-    presets: [["react-app"]],
+    presets: ['module:metro-react-native-babel-preset']
   };
 };

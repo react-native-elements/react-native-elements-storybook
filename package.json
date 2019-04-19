@@ -12,8 +12,8 @@
     "web": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -c .storybook -o .out"
+    "storybook": "REALM=WEB start-storybook -p 6006",
+    "build-storybook": "REALM=WEB build-storybook -c .storybook -o .out"
   },
   "dependencies": {
     "react": "^16.6.x",
@@ -26,7 +26,7 @@
     "react-native-web": "^0.9.x"
   },
   "devDependencies": {
-    "@babel/core": "7.1.0",
+    "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.3",
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
@@ -36,14 +36,18 @@
     "@storybook/addon-links": "^5.0.9",
     "@storybook/addons": "^5.0.9",
     "@storybook/react": "^5.0.9",
+    "@storybook/react-native": "^4.1.18",
+    "@storybook/theming": "^5.0.10",
     "@svgr/webpack": "2.4.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
+    "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-named-asset-import": "^0.2.3",
     "babel-preset-expo": "^5.0.0",
     "babel-preset-react-app": "^6.1.0",
+    "babel-runtime": "^6.26.0",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "2.4.1",
