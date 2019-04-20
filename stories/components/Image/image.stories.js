@@ -15,7 +15,7 @@ storiesOf('Image|Image', module)
 
   .add('Image with custom placeholder content', () => (
     <Image
-      source={{ uri: 'https://avatars3.githubusercontent.com/u/17120764' }}
+      source={{ uri: 'https://picsum.photos/300/300' }}
       style={{ width: 200, height: 200 }}
       PlaceholderContent={<ActivityIndicator />}
     />

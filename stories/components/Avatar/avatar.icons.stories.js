@@ -11,7 +11,6 @@ storiesOf('Avatar|Icons', module)
       icon={{ name: 'user', type: 'font-awesome' }}
       onPress={() => console.log("Works!")}
       activeOpacity={0.7}
-      containerStyle={{ flex: 2, marginLeft: 20, marginTop: 115 }}
     />
   ))
 
@@ -22,7 +21,6 @@ storiesOf('Avatar|Icons', module)
       icon={{ name: 'cake', type: 'material' }}
       onPress={() => console.log("Works!")}
       activeOpacity={0.7}
-      containerStyle={{ flex: 2, marginLeft: 20, marginTop: 115 }}
     />
   ))
 
@@ -33,7 +31,6 @@ storiesOf('Avatar|Icons', module)
       icon={{ name: 'meetup', color: 'red', type: 'font-awesome' }}
       onPress={() => console.log("Works!")}
       activeOpacity={0.7}
-      containerStyle={{ flex: 3, marginTop: 100 }}
     />
   ))
 
@@ -44,7 +41,6 @@ storiesOf('Avatar|Icons', module)
       overlayContainerStyle={{ backgroundColor: 'white' }}
       onPress={() => console.log("Works!")}
       activeOpacity={0.7}
-      containerStyle={{ flex: 4, marginTop: 75 }}
     />
   ))
 
@@ -55,7 +51,6 @@ storiesOf('Avatar|Icons', module)
       icon={{ name: 'home', type: 'font-awesome' }}
       onPress={() => console.log("Works!")}
       activeOpacity={0.7}
-      containerStyle={{ flex: 5, marginRight: 60 }}
     />
   ))
 
@@ -66,6 +61,5 @@ storiesOf('Avatar|Icons', module)
       icon={{ name: 'user', type: 'font-awesome' }}
       onPress={() => console.log("Works!")}
       activeOpacity={0.7}
-      containerStyle={{ flex: 2, marginLeft: 20, marginTop: 115 }}
     />
   ));
