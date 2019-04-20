@@ -70,7 +70,7 @@ storiesOf('Card|Card', module)
   })
 
   .add('Implemented without header, using ListItem component', () => (
-    <Card containerStyle={{ padding: 0 }} >
+    <Card containerStyle={{ padding: 0, alignSelf: 'stretch' }} >
       {
         users.map((u, i) => {
           return (

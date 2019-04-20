@@ -1,8 +1,14 @@
+import React from 'react';
 import { AppRegistry } from 'react-native';
-import { getStorybookUI, configure } from '@storybook/react-native';
+import { getStorybookUI, configure, addDecorator } from '@storybook/react-native';
 
 import { loadStories } from './storyLoader';
-import { name as appName } from './../../app.json';
+import CenterView from '../components/CenterView';
+import { name as appName } from '../../app.json';
+
+// using decorator to centering all components
+// https://storybook.js.org/docs/basics/writing-stories/#using-decorators
+addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
 
 // import stories
 configure(() => {

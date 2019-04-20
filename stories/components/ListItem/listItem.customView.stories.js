@@ -33,6 +33,7 @@ storiesOf('ListItem|Custom View', module)
           </View>
         }
         leftAvatar={{ source: { uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/larrygerard/128.jpg' } }}
+        containerStyle={{ width: 400 }}
       />
     )
   });
