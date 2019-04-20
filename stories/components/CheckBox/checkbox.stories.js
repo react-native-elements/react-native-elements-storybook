@@ -4,9 +4,12 @@ import { storiesOf } from '@storybook/react';
 import { CheckBox, Image } from 'react-native-elements';
 import CheckBoxContainer from './CheckBoxContainer';
 
+const checkedImage = require('../../../assets/checked.png')
+const uncheckedImage = require('../../../assets/unchecked.png')
+
 const renderImage = source => (
   <Image
-    source={require(`../../../assets/${source}.png`)}
+    source={source}
     style={{ width: 20, height: 20 }}
   />
 )
@@ -76,8 +79,8 @@ storiesOf('CheckBox|CheckBox', module)
       {(checked, onPress) => (
         <CheckBox
           title='Click Here to Toggle the Icon'
-          checkedIcon={renderImage('checked')}
-          uncheckedIcon={renderImage('unchecked')}
+          checkedIcon={renderImage(checkedImage)}
+          uncheckedIcon={renderImage(uncheckedImage)}
           checked={checked}
           onPress={onPress}
         />
