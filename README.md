@@ -55,28 +55,36 @@ To test it locally, using [serve](https://www.npmjs.com/package/serve) for examp
 ✗ npx serve .out
 ```
 
+### Start Storybook in iOS Simulator
+
+```
+✗ yarn ios
+```
+
+<img src='https://user-images.githubusercontent.com/17120764/56459287-a2085500-63bb-11e9-94d3-e650b2151a63.png' width=300 />
+
 ## Components included:
 
 - [x] [Avatar](http://rne-storybook.surge.sh/?path=/story/avatar-icons--default-size)
-- [ ] Badge
+- [x] [Badge](http://rne-storybook.surge.sh/?path=/story/badge-badge--standard-badge)
 - [x] [Button](http://rne-storybook.surge.sh/?path=/story/button-button--with-title)
-- [ ] ButtonGroup
-- [ ] Card
-- [ ] CheckBox
-- [ ] Divider
-- [ ] Header
-- [ ] Icon
-- [ ] Image
-- [ ] Input
-- [ ] ListItem
+- [x] [ButtonGroup](http://rne-storybook.surge.sh/?path=/story/button-buttongroup--using-strings)
+- [x] [Card](http://rne-storybook.surge.sh/?path=/story/card-card--implemented-with-header)
+- [x] [CheckBox](http://rne-storybook.surge.sh/?path=/story/checkbox-checkbox--default)
+- [x] [Divider](http://rne-storybook.surge.sh/?path=/story/divider-divider--usage)
+- [x] [Header](http://rne-storybook.surge.sh/?path=/story/header-header--with-default-components)
+- [x] [Icon](http://rne-storybook.surge.sh/?path=/story/icon-icon--basic-usage)
+- [x] [Image](http://rne-storybook.surge.sh/?path=/story/image-image--standard-image)
+- [x] [Input](http://rne-storybook.surge.sh/?path=/story/input-input--basic-input)
+- [x] [ListItem](http://rne-storybook.surge.sh/?path=/story/listitem-using-rn-flatlist--implemented-with-link-and-avatar)
 - [ ] Overlay
-- [ ] Pricing
+- [x] [Pricing](http://rne-storybook.surge.sh/?path=/story/pricing-pricingcard--basic-usage)
 - [ ] Rating
 - [ ] SearchBar
 - [ ] Slider
-- [ ] SocialIcon
-- [ ] Text
-- [ ] Tile
+- [x] [SocialIcon](http://rne-storybook.surge.sh/?path=/story/socialicon-button--facebook-type)
+- [x] [Text](http://rne-storybook.surge.sh/?path=/story/text-text--heading-usage)
+- [x] [Tile](http://rne-storybook.surge.sh/?path=/story/tile-tile--featured-tile)
 - [ ] Tooltip
 
 ## Contributing
