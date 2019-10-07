@@ -6,7 +6,7 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 
-const path = require("path");
+const path = require('path');
 
 module.exports = ({ config }) => {
   config.module.rules.push(
@@ -14,25 +14,25 @@ module.exports = ({ config }) => {
     {
       test: /\.js$/,
       include: [
-        path.resolve(__dirname, "../node_modules/react-native/"),
-        path.resolve(__dirname, "../node_modules/react-native-elements/"),
-        path.resolve(__dirname, "../node_modules/react-native-ratings/"),
-        path.resolve(__dirname, "../node_modules/react-native-vector-icons/")
+        path.resolve(__dirname, '../node_modules/react-native/'),
+        path.resolve(__dirname, '../node_modules/react-native-elements/'),
+        path.resolve(__dirname, '../node_modules/react-native-ratings/'),
+        path.resolve(__dirname, '../node_modules/react-native-vector-icons/')
       ],
       use: {
-        loader: "babel-loader",
+        loader: 'babel-loader',
         options: {
           cacheDirectory: false,
           presets: [
             [
-              "module:metro-react-native-babel-preset",
+              'module:metro-react-native-babel-preset',
               { disableImportExportTransform: true }
             ]
           ],
           plugins: [
             // needed to support async/await
-            "@babel/plugin-transform-runtime",
-            "@babel/plugin-proposal-class-properties"
+            '@babel/plugin-transform-runtime',
+            '@babel/plugin-proposal-class-properties'
           ]
         }
       }
@@ -41,16 +41,16 @@ module.exports = ({ config }) => {
     {
       test: /\.(gif|jpe?g|png|svg)$/,
       use: {
-        loader: "file-loader"
+        loader: 'file-loader'
       }
     },
     // loader for font icons
     {
       test: /\.ttf$/,
-      loader: "url-loader",
+      loader: 'url-loader',
       include: path.resolve(
         __dirname,
-        "../node_modules/react-native-vector-icons/"
+        '../node_modules/react-native-vector-icons/'
       )
     }
   );
