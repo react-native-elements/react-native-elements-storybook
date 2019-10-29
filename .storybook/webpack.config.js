@@ -37,13 +37,6 @@ module.exports = ({ config }) => {
         }
       }
     },
-    // loader for png
-    {
-      test: /\.(gif|jpe?g|png|svg)$/,
-      use: {
-        loader: 'file-loader'
-      }
-    },
     // loader for font icons
     {
       test: /\.ttf$/,
