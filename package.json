@@ -79,7 +79,7 @@
     "postcss-preset-env": "6.0.6",
     "postcss-safe-parser": "4.0.1",
     "react-dev-utils": "^6.1.1",
-    "react-native-storybook-loader": "^1.8.0",
+    "react-native-storybook-loader": "^1.8.1",
     "react-test-renderer": "^16.6.3",
     "resolve": "1.8.1",
     "sass-loader": "7.1.0",
