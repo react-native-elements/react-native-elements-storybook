@@ -24,7 +24,7 @@
     "react-native": "^0.59.5",
     "react-native-elements": "^1.2.5",
     "react-native-vector-icons": "^6.4.2",
-    "react-native-web": "^0.9.x"
+    "react-native-web": "^0.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
