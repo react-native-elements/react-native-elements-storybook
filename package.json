@@ -12,8 +12,10 @@
     "web": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "nuke": "rm -rf node_modules && yarn cache clean && yarn",
     "prestorybook": "rnstl",
     "storybook": "REALM=WEB start-storybook -p 6006",
+    "storybook-web": "REALM=WEB start-storybook -p 6006 -c ./node_modules/react-native-hybrid-storybook/src/web/storybook",
     "build-storybook": "REALM=WEB build-storybook -c .storybook -o .out"
   },
   "dependencies": {
@@ -46,6 +48,7 @@
     "babel-loader": "8.0.4",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-named-asset-import": "^0.2.3",
+    "babel-plugin-wildcard": "^6.0.0",
     "babel-preset-expo": "^5.0.0",
     "babel-preset-react-app": "^6.1.0",
     "babel-runtime": "^6.26.0",
@@ -79,6 +82,7 @@
     "postcss-preset-env": "6.0.6",
     "postcss-safe-parser": "4.0.1",
     "react-dev-utils": "^6.1.1",
+    "react-native-hybrid-storybook": "https://github.com/stokesbga/react-native-hybrid-storybook",
     "react-native-storybook-loader": "^1.8.0",
     "react-test-renderer": "^16.6.3",
     "resolve": "1.8.1",

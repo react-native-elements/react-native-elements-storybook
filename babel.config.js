@@ -10,7 +10,8 @@ module.exports = function (api) {
           alias: {
             "^react-native$": "react-native-web"
           }
-        }]
+        }],
+        "wildcard"
       ],
       presets: [["react-app"]],
     };
@@ -22,7 +23,8 @@ module.exports = function (api) {
         alias: {
           "@storybook/react": "@storybook/react-native"
         }
-      }]
+      }],
+      "wildcard"
     ],
     presets: ['module:metro-react-native-babel-preset']
   };

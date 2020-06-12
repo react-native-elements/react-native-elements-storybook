@@ -6,14 +6,26 @@ import { loadStories } from './storyLoader';
 import CenterView from '../components/CenterView';
 import { name as appName } from '../../app.json';
 
-// using decorator to centering all components
+import { loadFont } from 'react-native-hybrid-storybook';
+import { Fonts} from '../../assets'
+
+const loadFonts = () => {
+  Fonts.map(f => {
+    loadFont(f, "FontAwesome")
+  })
+}
+
+// Using decorator to centering all components
 // https://storybook.js.org/docs/basics/writing-stories/#using-decorators
 addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
 
-// import stories
+// Import stories
 configure(() => {
   loadStories()
+  loadFonts()
 }, module);
+
+// Import custom fonts
 
 // Refer to https://github.com/storybooks/storybook/tree/master/app/react-native#start-command-parameters
 // To find allowed options for getStorybookUI
