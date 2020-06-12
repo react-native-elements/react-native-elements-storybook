@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from 'react-native-hybrid-storybook';
 
 import { Text, View } from 'react-native';
 import { Avatar, Badge, Icon, withBadge } from 'react-native-elements';

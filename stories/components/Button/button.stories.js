@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from 'react-native-hybrid-storybook';
 
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from 'react-native-hybrid-storybook';
 
 import ButtonGroupComponents from './ButtonGroupComponents';
 import ButtonGroupStrings from './ButtonGroupStrings';

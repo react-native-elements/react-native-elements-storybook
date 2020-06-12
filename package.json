@@ -15,7 +15,7 @@
     "nuke": "rm -rf node_modules && yarn cache clean && yarn",
     "prestorybook": "rnstl",
     "storybook": "REALM=WEB start-storybook -p 6006",
-    "storybook-web": "REALM=WEB start-storybook -p 6006 -c ./node_modules/react-native-hybrid-storybook/src/web/storybook",
+    "storybook-web": "REALM=WEB start-storybook -p 6006  -c ./node_modules/react-native-hybrid-storybook/src/web/storybook",
     "build-storybook": "REALM=WEB build-storybook -c .storybook -o .out"
   },
   "dependencies": {

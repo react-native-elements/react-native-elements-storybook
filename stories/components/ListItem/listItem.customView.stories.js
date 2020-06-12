@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from 'react-native-hybrid-storybook';
 
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { ListItem } from 'react-native-elements';
