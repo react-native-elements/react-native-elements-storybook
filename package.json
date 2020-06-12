@@ -17,14 +17,14 @@
     "build-storybook": "REALM=WEB build-storybook -c .storybook -o .out"
   },
   "dependencies": {
-    "react": "^16.6.x",
-    "react-app-polyfill": "^0.1.3",
-    "react-art": "^16.6.3",
-    "react-dom": "^16.6.x",
-    "react-native": "^0.59.5",
-    "react-native-elements": "^1.2.5",
-    "react-native-vector-icons": "^6.4.2",
-    "react-native-web": "^0.9.x"
+    "react": "16.9.0",
+    "react-app-polyfill": "^1.0.6",
+    "react-art": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-native": "^0.62.2",
+    "react-native-elements": "^2.0.2",
+    "react-native-vector-icons": "^6.6.0",
+    "react-native-web": "^0.12.3"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
