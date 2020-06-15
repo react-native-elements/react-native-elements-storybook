@@ -9,6 +9,7 @@ module.exports = function (api) {
         ["module-resolver", {
           "root": ["./"],
           "alias": {
+            "^react-native$": "react-native-web",
             "assets": "./assets",
             "components": "./src/components",
             "config": "./src/config",
@@ -16,14 +17,10 @@ module.exports = function (api) {
             "navigation": "./src/navigation",
             "screens": "./src/screens",
             "services": "./src/services",
-            "styles": "./styles",
-            "stories": "./stories"
+            "storybook": "./stories",
+            "styles": "./styles"
           },
           "extensions": [".js", ".ios.js", ".android.js"]
-        }, {
-          alias: {
-            "^react-native$": "react-native-web"
-          }
         }]
       ],
       presets: [["react-app"]],
@@ -35,6 +32,7 @@ module.exports = function (api) {
       ["module-resolver", {
         "root": ["./"],
         "alias": {
+          "@storybook/react": "@storybook/react-native",
           "assets": "./assets",
           "components": "./src/components",
           "config": "./src/config",
@@ -42,14 +40,10 @@ module.exports = function (api) {
           "navigation": "./src/navigation",
           "screens": "./src/screens",
           "services": "./src/services",
-          "styles": "./styles",
-          "stories": "./stories"
+          "storybook": "./stories",
+          "styles": "./styles"
         },
         "extensions": [".js", ".ios.js", ".android.js"]
-      }, {
-        alias: {
-          "@storybook/react": "@storybook/react-native"
-        }
       }]
     ],
     presets: ['module:metro-react-native-babel-preset']
