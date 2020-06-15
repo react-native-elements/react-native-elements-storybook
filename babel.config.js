@@ -7,6 +7,20 @@ module.exports = function (api) {
     return {
       plugins: [
         ["module-resolver", {
+          "root": ["./"],
+          "alias": {
+            "assets": "./assets",
+            "components": "./src/components",
+            "config": "./src/config",
+            "modules": "./src/modules",
+            "navigation": "./src/navigation",
+            "screens": "./src/screens",
+            "services": "./src/services",
+            "styles": "./styles",
+            "stories": "./stories"
+          },
+          "extensions": [".js", ".ios.js", ".android.js"]
+        }, {
           alias: {
             "^react-native$": "react-native-web"
           }
@@ -19,6 +33,20 @@ module.exports = function (api) {
   return {
     plugins: [
       ["module-resolver", {
+        "root": ["./"],
+        "alias": {
+          "assets": "./assets",
+          "components": "./src/components",
+          "config": "./src/config",
+          "modules": "./src/modules",
+          "navigation": "./src/navigation",
+          "screens": "./src/screens",
+          "services": "./src/services",
+          "styles": "./styles",
+          "stories": "./stories"
+        },
+        "extensions": [".js", ".ios.js", ".android.js"]
+      }, {
         alias: {
           "@storybook/react": "@storybook/react-native"
         }

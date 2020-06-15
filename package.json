@@ -17,6 +17,8 @@
     "build-storybook": "REALM=WEB build-storybook -c .storybook -o .out"
   },
   "dependencies": {
+    "@outfix/react-native-app-scaler": "^0.2.4",
+    "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-app-polyfill": "^1.0.6",
     "react-art": "16.9.0",
