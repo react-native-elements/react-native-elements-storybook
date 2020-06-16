@@ -37,10 +37,17 @@ module.exports = ({ config }) => {
         }
       }
     },
-    // loader for font icons
+    // loader for fonts
     {
-      test: /\.ttf$/,
-      loader: 'url-loader',
+      test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+      use: [
+        {
+          loader: 'url-loader',
+          query: {
+            name: '[name].[ext]'
+          }
+        }
+      ],
       include: [
         path.resolve(__dirname, "../assets/Fonts/"),
         path.resolve(__dirname, '../node_modules/react-native-vector-icons/')

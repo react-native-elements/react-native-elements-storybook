@@ -13,7 +13,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "prestorybook": "rnstl",
-    "storybook": "REALM=WEB start-storybook -p 6006",
+    "storybook": "REALM=WEB start-storybook -p 6006 -c .storybook watch-css -s ./assets",
     "build-storybook": "REALM=WEB build-storybook -c .storybook -o .out"
   },
   "dependencies": {
