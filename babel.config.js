@@ -1,6 +1,5 @@
 module.exports = function (api) {
 
-  // https://babeljs.io/docs/en/config-files#apicache
   api.cache(true);
 
   if (process.env.REALM === 'WEB') {
@@ -10,6 +9,7 @@ module.exports = function (api) {
           "root": ["./"],
           "alias": {
             "^react-native$": "react-native-web",
+            "^@storybook/react-native$": "@storybook/react",
             "assets": "./assets",
             "components": "./src/components",
             "config": "./src/config",
@@ -32,7 +32,7 @@ module.exports = function (api) {
       ["module-resolver", {
         "root": ["./"],
         "alias": {
-          "@storybook/react": "@storybook/react-native",
+          "^@storybook/react$": "@storybook/react-native",
           "assets": "./assets",
           "components": "./src/components",
           "config": "./src/config",

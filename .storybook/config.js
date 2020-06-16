@@ -1,9 +1,6 @@
-import { configure } from '@storybook/react';
+import { AppRegistry } from "react-native";
+import { name as appName } from "../app.json";
 
-// automatically import all files ending in *.stories.js
-const req = require.context('../stories/components', true, /\.stories\.js$/);
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
+import StorybookUIRoot from "storybook/config";
 
-configure(loadStories, module);
+AppRegistry.registerComponent(appName, () => StorybookUIRoot);

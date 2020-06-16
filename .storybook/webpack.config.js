@@ -42,7 +42,7 @@ module.exports = ({ config }) => {
       test: /\.ttf$/,
       loader: 'url-loader',
       include: [
-        path.resolve(__dirname, "../assets/Fonts"),
+        path.resolve(__dirname, "../assets/Fonts/"),
         path.resolve(__dirname, '../node_modules/react-native-vector-icons/')
       ]
     }

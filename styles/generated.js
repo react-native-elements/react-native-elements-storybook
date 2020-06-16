@@ -1,5 +1,6 @@
 import { Dimensions, Platform } from "react-native"
-import { ScaledSheet, moderateScale, scale, verticalScale } from "@outfix/react-native-app-scaler"
+// import { ScaledSheet, moderateScale, scale, verticalScale } from "@outfix/react-native-app-scaler"
+const scale = v => v
 
 // Device information
 const iPhoneXAspectRatio = 2.16
