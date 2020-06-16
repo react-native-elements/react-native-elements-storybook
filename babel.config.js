@@ -1,27 +1,29 @@
-module.exports = function (api) {
-
+module.exports = function(api) {
   // https://babeljs.io/docs/en/config-files#apicache
   api.cache(true);
 
-  if (process.env.REALM === 'WEB') {
+  if (process.env.REALM === "WEB") {
     return {
       plugins: [
-        ["module-resolver", {
-          "root": ["./"],
-          "alias": {
-            "^react-native$": "react-native-web",
-            "assets": "./assets",
-            "components": "./src/components",
-            "config": "./src/config",
-            "modules": "./src/modules",
-            "navigation": "./src/navigation",
-            "screens": "./src/screens",
-            "services": "./src/services",
-            "storybook": "./stories",
-            "styles": "./styles"
+        [
+          "module-resolver",
+          {
+            root: ["./"],
+            alias: {
+              "^react-native$": "react-native-web",
+              assets: "./assets",
+              components: "./src/components",
+              config: "./src/config",
+              modules: "./src/modules",
+              navigation: "./src/navigation",
+              screens: "./src/screens",
+              services: "./src/services",
+              storybook: "./stories",
+              styles: "./styles",
+            },
+            extensions: [".js", ".ios.js", ".android.js"],
           },
-          "extensions": [".js", ".ios.js", ".android.js"]
-        }]
+        ],
       ],
       presets: [["react-app"]],
     };
@@ -29,23 +31,27 @@ module.exports = function (api) {
 
   return {
     plugins: [
-      ["module-resolver", {
-        "root": ["./"],
-        "alias": {
-          "@storybook/react": "@storybook/react-native",
-          "assets": "./assets",
-          "components": "./src/components",
-          "config": "./src/config",
-          "modules": "./src/modules",
-          "navigation": "./src/navigation",
-          "screens": "./src/screens",
-          "services": "./src/services",
-          "storybook": "./stories",
-          "styles": "./styles"
+      [
+        "module-resolver",
+        {
+          root: ["./"],
+          alias: {
+            "^react-native$": "react-native-web",
+            "@storybook/react": "@storybook/react-native",
+            assets: "./assets",
+            components: "./src/components",
+            config: "./src/config",
+            modules: "./src/modules",
+            navigation: "./src/navigation",
+            screens: "./src/screens",
+            services: "./src/services",
+            storybook: "./stories",
+            styles: "./styles",
+          },
+          extensions: [".js", ".ios.js", ".android.js"],
         },
-        "extensions": [".js", ".ios.js", ".android.js"]
-      }]
+      ],
     ],
-    presets: ['module:metro-react-native-babel-preset']
+    presets: ["module:metro-react-native-babel-preset"],
   };
 };

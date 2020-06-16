@@ -1,18 +1,18 @@
-import React from 'react';
-import { AppRegistry } from 'react-native';
-import { getStorybookUI, configure, addDecorator } from '@storybook/react-native';
+import React from "react";
+import { AppRegistry } from "react-native";
+import { getStorybookUI, configure, addDecorator } from "@storybook/react";
 
-import { loadStories } from './storyLoader';
-import { StoryBackground } from '../decorators';
-import { name as appName } from '../../app.json';
+import { loadStories } from "./storyLoader";
+import { StoryBackground } from "../decorators";
+import { name as appName } from "../../app.json";
 
 // using decorator to centering all components
 // https://storybook.js.org/docs/basics/writing-stories/#using-decorators
-addDecorator(getStory => <StoryBackground>{getStory()}</StoryBackground>)
+addDecorator((getStory) => <StoryBackground>{getStory()}</StoryBackground>);
 
 // import stories
 configure(() => {
-  loadStories()
+  loadStories();
 }, module);
 
 // Refer to https://github.com/storybooks/storybook/tree/master/app/react-native#start-command-parameters
