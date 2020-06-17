@@ -12,14 +12,14 @@ module.exports = function (api) {
 							"^react-native$": "react-native-web",
 							"^@storybook/react-native$": "@storybook/react",
 							assets: "./assets",
-							components: "./src/components",
+							components: "./src/Components",
 							config: "./src/config",
 							modules: "./src/modules",
 							navigation: "./src/navigation",
 							screens: "./src/screens",
-							services: "./src/services",
-							storybook: "./stories",
-							styles: "./styles"
+							services: "./src/Services",
+							storybook: "./storybook",
+							styles: "./src/Styles"
 						},
 						extensions: [".js", ".ios.js", ".android.js"]
 					}
@@ -38,14 +38,14 @@ module.exports = function (api) {
 					alias: {
 						"^@storybook/react$": "@storybook/react-native",
 						assets: "./assets",
-						components: "./src/components",
+						components: "./src/Components",
 						config: "./src/config",
 						modules: "./src/modules",
 						navigation: "./src/navigation",
 						screens: "./src/screens",
-						services: "./src/services",
-						storybook: "./stories",
-						styles: "./styles"
+						services: "./src/Services",
+						storybook: "./storybook",
+						styles: "./src/Styles"
 					},
 					extensions: [".js", ".ios.js", ".android.js"]
 				}

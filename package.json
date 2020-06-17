@@ -25,7 +25,7 @@
     "react-app-polyfill": "^1.0.6",
     "react-art": "16.9.0",
     "react-dom": "16.9.0",
-    "react-native": "0.61.5",
+    "react-native": "^0.62.2",
     "react-native-elements": "^2.0.2",
     "react-native-unimodules": "^0.9.1",
     "react-native-vector-icons": "^6.6.0",
@@ -157,10 +157,11 @@
   "config": {
     "react-native-storybook-loader": {
       "searchDir": [
-        "./stories/components"
+        "./src",
+        "./storybook/components"
       ],
-      "pattern": "**/*.stories.js",
-      "outputFile": "./stories/config/storyLoader.js"
+      "pattern": "**/*.+(stories|story|storybook).js",
+      "outputFile": "./storybook/config/storyLoader.js"
     }
   },
   "husky": {

@@ -1,11 +1,11 @@
-import { configure } from '@storybook/react';
-import { setDecorators } from 'storybook/config'
-import { loadFont, loadFontsFromDirectories } from './fontLoader'
-import path from 'path'
+import { configure } from "@storybook/react"
+import { setDecorators } from "storybook/config"
+import { loadFont, loadFontsFromDirectories } from "./fontLoader"
+import path from "path"
 
 const fontFolders = [
-  path.resolve(__dirname, "../assets/Fonts/"),
-  path.resolve(__dirname, "../node_modules/react-native-vector-icons/")
+	path.resolve(__dirname, "../assets/Fonts/"),
+	path.resolve(__dirname, "../node_modules/react-native-vector-icons/")
 ]
 
 // todo - fix this
@@ -14,9 +14,13 @@ const fontFolders = [
 
 setDecorators()
 
-const req = require.context('../stories/components', true, /\.stories\.js$/);
-function loadStories() {	
-  req.keys().forEach(filename => req(filename));	
+const storyFiles = {
+	...require.context("../src", true, /\.(stories|story|storybook)\.js$/),
+	...require.context("../storybook", true, /\.(stories|story|storybook)\.js$/)
 }
 
-configure(loadStories, module);
+function loadStories() {
+	storyFiles.keys().forEach((filename) => storyFiles(filename))
+}
+
+configure(loadStories, module)

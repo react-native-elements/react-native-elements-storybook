@@ -1,3 +1,3 @@
-# quadio-native
+# quadio-elements
 
-The Quadio mobile app built with React Native
+The cross platform Quadio elements library built with React Native Web
