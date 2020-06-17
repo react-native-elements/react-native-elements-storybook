@@ -1,5 +1,5 @@
 import { ActivityIndicator } from "react-native"
-import { Text, TouchableOpacity, View } from "../"
+import { Button } from "react-native-elements"
 import React from "react"
 
 export default class QuadioButton extends React.PureComponent {
@@ -10,6 +10,7 @@ export default class QuadioButton extends React.PureComponent {
 			color = "#fff",
 			borderColor,
 			background,
+			title = "Press Me",
 			small,
 			medium,
 			large,
@@ -29,14 +30,14 @@ export default class QuadioButton extends React.PureComponent {
 		const buttonWidth = width
 			? width
 			: large
-				? 140
-				: medium
-					? 120
-					: small
-						? 70
-						: full
-							? "100%"
-							: 110
+			? 140
+			: medium
+			? 120
+			: small
+			? 70
+			: full
+			? "100%"
+			: 110
 		const buttonHeight = height ? height : large ? 40 : medium ? 30 : small ? 23 : full ? 40 : 27
 
 		const containerDefaultStyle = {
@@ -59,25 +60,13 @@ export default class QuadioButton extends React.PureComponent {
 		const incomingStyle = Array.isArray(style) ? style : [style]
 
 		return (
-			<TouchableOpacity
-				style={[containerDefaultStyle, containerStyle]}
+			<Button
+				buttonStyle={[containerDefaultStyle, containerStyle]}
 				onPress={onPress}
-				disabled={disabled || isLoading}>
-				{isLoading ? (
-					<View>
-						<ActivityIndicator size={"small"} color={"#eee"} />
-						{isLoadingLabel && (
-							<Text veryBold style={{ fontSize: 8 }}>
-								{isLoadingLabel}
-							</Text>
-						)}
-					</View>
-				) : (
-					<Text center style={[textStyle, ...incomingStyle]} {...props}>
-						{props.children}
-					</Text>
-				)}
-			</TouchableOpacity>
+				disabled={disabled || isLoading}
+				loading={isLoading}
+				title={isLoading ? isLoadingLabel : title}
+			/>
 		)
 	}
 }

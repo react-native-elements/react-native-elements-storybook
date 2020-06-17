@@ -37,9 +37,7 @@ export default class Welcome extends React.Component {
 					services, constants, and styles live here, and can be imported into both web and native
 					projects with no additional config work required. Isn't that something?
 				</Text>
-				<Image
-					source={require("../../../assets/Images/logo-white-splash.png")}
-					style={this.styles.image} />
+				<Image source={require("assets/Images/logo-white-splash.png")} style={this.styles.image} />
 			</View>
 		)
 	}

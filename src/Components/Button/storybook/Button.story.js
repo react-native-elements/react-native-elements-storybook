@@ -1,22 +1,42 @@
 import { storiesOf } from "@storybook/react-native"
 import React from "react"
 
+import { Divider, Explorer, Item, PropsList, StoryBackground } from "storybook/decorators"
 import { Text, View } from "components"
 import Colors from "styles/colors"
 import Button from "../"
 
 storiesOf("Button", module)
 	.add("Follow Buttons", () => (
-		<View>
-			<View style={{ marginBottom: 20 }}>
-				<Button bold rounded outline opaque borderColor={Colors.grey4}>
-					Follow
-				</Button>
-			</View>
-			<Button rounded outline opaque borderColor={Colors.grey4}>
-				Following
-			</Button>
-		</View>
+		<Explorer
+			title={"Follow Buttons"}
+			exportName={"Button"}
+			description={"Button for follows and list actions."}>
+			<Item name={"Default"}>
+				<React.Fragment>
+					<Button rounded outline opaque borderColor={Colors.grey4}>
+						Following
+					</Button>
+				</React.Fragment>
+			</Item>
+			<Item name={"Disabled"}>
+				<React.Fragment>
+					<Button bold rounded outline opaque borderColor={Colors.grey4}>
+						Follow
+					</Button>
+					<Divider />
+				</React.Fragment>
+			</Item>
+
+			<PropsList
+				list={[
+					{ key: "title", type: "string" },
+					{ key: "iconName", type: "string" },
+					{ key: "disabled", type: "boolean" },
+					{ key: "onPress", type: "function" }
+				]}
+			/>
+		</Explorer>
 	))
 	.add("Small Buttons", () => (
 		<View>

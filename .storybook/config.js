@@ -1,7 +1,11 @@
-import { configure } from "@storybook/react"
-import { setDecorators } from "storybook/config"
+import React from "react"
+
+import { configure, addDecorator } from "@storybook/react"
 import { loadFont, loadFontsFromDirectories } from "./fontLoader"
+import { StoryBackground } from "storybook/decorators"
 import path from "path"
+
+addDecorator((storyFn) => <StoryBackground>{storyFn()}</StoryBackground>)
 
 const fontFolders = [
 	path.resolve(__dirname, "../assets/Fonts/"),
@@ -12,13 +16,7 @@ const fontFolders = [
 // loadFontsFromDirectories(fontFolders)
 // loadFont(`${fontFolders[0]}Cabin-Bold.ttf`, "Cabin")
 
-setDecorators()
-
-const storyFiles = {
-	...require.context("../src", true, /\.(stories|story|storybook)\.js$/),
-	...require.context("../storybook", true, /\.(stories|story|storybook)\.js$/)
-}
-
+const storyFiles = require.context("../src", true, /\.(stories|story|storybook)\.js$/)
 function loadStories() {
 	storyFiles.keys().forEach((filename) => storyFiles(filename))
 }

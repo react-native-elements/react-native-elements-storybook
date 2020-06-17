@@ -80,7 +80,7 @@ storiesOf("Card|Card", module)
 	))
 
 	.add("Implemented with Text and Button as children", () => (
-		<Card title={"HELLO WORLD"} image={require("../../../assets/Images/logo-white-splash.png")}>
+		<Card title={"HELLO WORLD"} image={require("assets/Images/logo-white-splash.png")}>
 			<Text style={{ marginBottom: 10 }}>
 				The idea with React Native Elements is more about component structure than actual design.
 			</Text>

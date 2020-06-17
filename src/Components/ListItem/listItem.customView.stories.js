@@ -27,7 +27,7 @@ storiesOf("ListItem|Custom View", module).add("Implemented with custom View for 
 			subtitle={
 				<View style={styles.subtitleView}>
 					<Image
-						source={require("../../../assets/Images/logo-white-splash.png")}
+						source={require("assets/Images/logo-white-splash.png")}
 						style={styles.ratingImage}
 					/>
 					<Text style={styles.ratingText}>5 months ago</Text>

@@ -4,8 +4,8 @@ import React from "react"
 import { CheckBox, Image } from "react-native-elements"
 import CheckBoxContainer from "./CheckBoxContainer"
 
-const checkedImage = require("../../../assets/Images/checked.png")
-const uncheckedImage = require("../../../assets/Images/unchecked.png")
+const checkedImage = require("assets/Images/checked.png")
+const uncheckedImage = require("assets/Images/unchecked.png")
 
 const renderImage = (source) => <Image source={source} style={{ width: 20, height: 20 }} />
 
