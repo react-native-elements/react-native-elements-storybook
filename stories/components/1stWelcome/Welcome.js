@@ -31,14 +31,12 @@ export default class Welcome extends React.Component {
   render() {
     return (
       <View style={this.styles.wrapper}>
-        <Text style={this.styles.header}>Welcome to React Native Elements Storybook</Text>
+        <Text style={this.styles.header}>Welcome to Quadio Elements Storybook</Text>
         <Text style={this.styles.content}>
-          This is a UI Component development environment for your React Native app. Here you can
-          display and interact with your UI components as stories. A story is a single state of one
-          or more UI components. You can have as many stories as you want. In other words a story is
-          like a visual test case.
+          This is a the shared library for everything Quadio front end. Components, queries, services, constants, and styles live here, and can be imported into both web and native projects with no additional config work required.
+          Isn't that something?
         </Text>
-        <Image source={require('../../../assets/rne.storybook.png')} style={this.styles.image} />
+        <Image source={require('../../../assets/Images/logo-white-splash.png')} style={this.styles.image} />
       </View>
     );
   }
