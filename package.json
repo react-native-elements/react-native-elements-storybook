@@ -12,6 +12,8 @@
     "web": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "pretty": "npx prettier-eslint \"$PWD/**/*.js\" --write --ignore \"$PWD/node_modules/**/*.js\"",
+    "lint": "npx eslint ./app",
     "prestorybook": "rnstl",
     "storybook": "REALM=WEB start-storybook -p 6006 -c .storybook watch-css -s ./assets",
     "build-storybook": "REALM=WEB build-storybook -c .storybook -o .out"
@@ -44,7 +46,7 @@
     "@storybook/theming": "^5.3.19",
     "@svgr/webpack": "2.4.1",
     "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "9.0.0",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
     "babel-plugin-module-resolver": "^3.2.0",
@@ -58,21 +60,25 @@
     "css-loader": "1.0.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
-    "eslint": "5.6.0",
+    "eslint": "^7.2.0",
     "eslint-config-react-app": "^3.0.5",
     "eslint-loader": "2.1.1",
     "eslint-plugin-flowtype": "2.50.1",
-    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-jsx-a11y": "6.1.2",
-    "eslint-plugin-react": "7.11.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-native": "^3.8.1",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.5.0",
     "file-loader": "2.0.0",
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.0",
     "html-webpack-plugin": "4.0.0-alpha.2",
+    "husky": "^4.2.5",
     "identity-obj-proxy": "3.0.0",
     "jest": "23.6.0",
     "jest-pnp-resolver": "1.0.1",
     "jest-resolve": "23.6.0",
+    "lint-staged": "^10.2.11",
     "metro-react-native-babel-preset": "^0.53.1",
     "mini-css-extract-plugin": "0.4.3",
     "optimize-css-assets-webpack-plugin": "5.0.1",
@@ -81,6 +87,9 @@
     "postcss-loader": "3.0.0",
     "postcss-preset-env": "6.0.6",
     "postcss-safe-parser": "4.0.1",
+    "prettier": "^2.0.5",
+    "prettier-eslint": "^11.0.0",
+    "prettier-eslint-cli": "^5.0.0",
     "react-dev-utils": "^6.1.1",
     "react-native-storybook-loader": "^1.8.0",
     "react-test-renderer": "^16.6.3",
@@ -153,5 +162,16 @@
       "pattern": "**/*.stories.js",
       "outputFile": "./stories/config/storyLoader.js"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "npx prettier-eslint --write",
+      "git add"
+    ]
   }
 }

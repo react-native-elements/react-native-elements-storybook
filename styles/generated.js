@@ -1,6 +1,6 @@
 import { Dimensions, Platform } from "react-native"
 // import { ScaledSheet, moderateScale, scale, verticalScale } from "@outfix/react-native-app-scaler"
-const scale = v => v
+const scale = (v) => v
 
 // Device information
 const iPhoneXAspectRatio = 2.16
@@ -26,7 +26,7 @@ const isIphoneX =
 	Platform.isPad
 
 // Scale fonts or view dimensions
-const scalePhoneOnly = v => (isPad ? v : scale(v))
+const scalePhoneOnly = (v) => (isPad ? v : scale(v))
 
 // Components
 const actionButtonHeight = isIphoneX ? 90 : 50

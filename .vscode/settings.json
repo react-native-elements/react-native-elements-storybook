@@ -1,0 +1,7 @@
+{
+  "javascript.suggest.autoImports": false,
+  "typescript.validate.enable": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveTimeout": 5000
+}

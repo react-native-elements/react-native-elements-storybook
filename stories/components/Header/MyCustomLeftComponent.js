@@ -1,8 +1,6 @@
-import React from 'react';
-import { Avatar } from 'react-native-elements';
+import { Avatar } from "react-native-elements"
+import React from "react"
 
-const MyCustomLeftComponent = () => (
-  <Avatar rounded icon={{ name: 'home', type: 'font-awesome' }} />
-)
+const MyCustomLeftComponent = () => <Avatar rounded icon={{ name: "home", type: "font-awesome" }} />
 
-export default MyCustomLeftComponent;
+export default MyCustomLeftComponent

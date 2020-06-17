@@ -1,0 +1,69 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "react-native/react-native": true,
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "settings": {
+    "react": {
+      "version": "16.8.3",
+      "flowVersion": "0.92"
+    }
+  },
+  "plugins": ["import", "react", "react-native", "sort-imports-es6-autofix"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/no-cycle": 1,
+    "import/named": 1,
+    "import/namespace": 1,
+    "import/default": 0,
+    "import/export": 1,
+
+    "sort-imports-es6-autofix/sort-imports-es6": 1,
+    "flowtype/no-types-missing-file-annotation": 0,
+    "flowtype/no-weak-types": 0,
+
+    "semi": [2, "never"],
+    "no-console": ["error", { "allow": ["warn", "error", "info"] }],
+    "object-curly-newline": 0,
+    "no-nested-ternary": 0,
+    "no-unused-vars": 1,
+    "no-empty": 0,
+    "no-tabs": 0,
+    "no-mixed-spaces-and-tabs": "error",
+    "indent": ["error", "tab", { "SwitchCase": 1 }],
+    "jsx-a11y/href-no-hash": 0,
+    
+    "react/prop-types": [0],
+    "react/prefer-stateless-function": [1, { "ignorePureComponents": true }],
+    "react/jsx-indent": [2, "tab"],
+    "react/jsx-indent-props": ["error", "tab"],
+    "react/jsx-filename-extension": 0,
+    "react/jsx-one-expression-per-line": [0],
+    "react/jsx-key": 0,
+    "react/jsx-closing-bracket-location": [1, "after-props"],
+    "react/jsx-curly-brace-presence": [2, { "props": "always", "children": "never" }],
+    "react/jsx-tag-spacing": [
+      1,
+      {
+        "closingSlash": "never",
+        "beforeSelfClosing": "always",
+        "afterOpening": "never",
+        "beforeClosing": "allow"
+      }
+    ]
+  },
+  "globals": {
+    "_": false,
+    "jest": true
+  }
+}
