@@ -23,9 +23,7 @@ module.exports = ({ config }) => {
 				loader: "babel-loader",
 				options: {
 					cacheDirectory: false,
-					presets: [
-						["module:metro-react-native-babel-preset", { disableImportExportTransform: true }]
-					],
+					presets: [["react-app", { disableImportExportTransform: true }]],
 					plugins: [
 						// needed to support async/await
 						"@babel/plugin-transform-runtime",

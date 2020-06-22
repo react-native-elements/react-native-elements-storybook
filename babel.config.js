@@ -25,7 +25,7 @@ module.exports = function (api) {
 					}
 				]
 			],
-			presets: [["react-app"]]
+			presets: ["react-app"]
 		}
 	}
 
